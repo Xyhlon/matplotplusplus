@@ -22,7 +22,7 @@
 
             version = "v1.2.1";
 
-            buildInputs = with pkgs; [
+            propagatedBuildInputs = with pkgs; [
               gnuplot
             ];
 
@@ -44,6 +44,7 @@
             };
           });
         };
+        formatter = nixpkgs.legacyPackages.${system}.alejandra;
       }
     );
 }
